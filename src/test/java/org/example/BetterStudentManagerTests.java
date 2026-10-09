@@ -2,6 +2,8 @@ package org.example;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class BetterStudentManagerTests {
     @Test
     public void testAddStudent() {
@@ -13,6 +15,13 @@ public class BetterStudentManagerTests {
         assert manager.students.get(0).grade == 90.9;
         assert manager.students.get(1).name.equals("Jane");
         assert manager.students.get(1).grade == 88.3;
+    }
+
+    @Test
+    public void addStudentAddsStudentToList() {
+        BetterStudentManager manager = new BetterStudentManager();
+        manager.addStudent("Josh", 90);
+        assertEquals(1, manager.students.size());
     }
 
     @Test

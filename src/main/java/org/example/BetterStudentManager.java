@@ -41,8 +41,7 @@ public class BetterStudentManager {
 
         for (Student student : students) {
             result += student.name + " " + student.grade + "\n";
-            return result;
         }
-        return null;
+        return result;
     }
 }
